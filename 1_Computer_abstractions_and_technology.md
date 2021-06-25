@@ -40,7 +40,7 @@
 
 다음 아이디어들은 60년여의 컴퓨터 역사 가운데 컴퓨터 구조 분야에서 발명된 8개의 아이디어들이다.
 1. `Moore's law를 고려한 설계`: 컴퓨터 하드웨어 성능이 아주 빠르게 변화하는 것에 발맞춰, 컴퓨터 설계자는 프로젝트의 시작 시점보다 종료 시점의 기술을 예상해야 한다.
-> **`Moore's law`**
+> **`Moore's law`** <br>
 > 18~24개월마다 칩에 집적되는 소자의 수가 2배가 된다는 법칙. Gordon Moore가 1965년에 예측하였다.
 2. `추상화`: 하위 수준의 상세한 사항을 보이지 않게 함으로써 상위 수준의 모델을 단순화한다.
 3. `자주 생기는 일을 빠르게`(`common case fast`): 드물게 생기는 일을 최적화하는 것보다 자주 생기는 일을 빠르게 만드는 것이 성능 개선에 도움이 된다.
@@ -85,35 +85,40 @@
 
 ### 입출력
 - `디스플레이`: 각 화상은 `픽셀`의 행렬로 구성되며, 이것은 `비트맵`(`bitmap`)이라고 부르는 비트들의 행렬로 표현된다. 컬러 디스플레이는 RGB 각각마다 8비트씩, 모두 24비트를 사용하여 색상을 표시할 수 있다.
-> **`프레임 버퍼`(`frame buffer, or raster refresh buffer`)**
+> **`프레임 버퍼`(`frame buffer, or raster refresh buffer`)** <br>
 > 비트맵을 기억하는 메모리. 그리팩 하드웨어는 스크린에 표시될 화상을 이곳에 저장했다가, 재생 속도에 맞춰 그래픽 디스플레이를 보낸다.
 
 - `네트워크 인터페이스`: 컴퓨터 네트워크를 통해 컴퓨터가 연결되게 해준다.
   
-> **`LAN`(`local area network`)**
+> **`LAN`(`local area network`)** <br>
 > 지리적으로 제한된 지역에서 데이터를 주고받도록 설계된 네트워크
 <br>
-> **`WAN`(`wide area network`)**
+
+> **`WAN`(`wide area network`)** <br>
 > 대륙 전체를 연결할 수 있는 수백 km 이상의 네트워크
 - 마우스, 키보드, 게임패드, 웹캠, 프린터, 터치스크린, ...
 
 ### 프로세서
 - `프로세서`: 프로그램의 지시대로 일을 하는 부분. 숫자를 더하고, 검사하고, IO device에 신호를 보내 작동을 지시하는 등의 일을 한다.
-> **`데이터패스`**
+- 
+> **`데이터패스`** <br>
 > 프로세서의 근육에 해당한다. 연산을 수행하는 부분이다.
 <br>
-> **`제어 유닛`**
+
+> **`제어 유닛`** <br>
 > 프로세서의 두뇌에 해당한다. 명령어에 따라 데이터패스, 메모리, IO device가 할 일을 지시한다.
 <br>
-> **`명령어 집합 구조`(`ISA: instruction set architecture`)**
+
+> **`명령어 집합 구조`(`ISA: instruction set architecture`)** <br>
 > 하드웨어와 소프트웨어 계층 사이를 이어주는 인터페이스이다. 이를 통해 구조와 구현을 분리하여 생각할 수 있도록 해준다.
 
 ### 메모리
 - 메모리: 데이터의 저장소이다.
-> **`volatile memory`(=`main memory` =`primary memory`)**
+> **`volatile memory`(=`main memory` =`primary memory`)** <br>
 > e.g. DRAM
 <br>
-> **`nonvolatile memory`(=`secondary memory`)**
+
+> **`nonvolatile memory`(=`secondary memory`)** <br>
 > e.g. DVD, magnetic disk, flash memory
 <br>
 <br>
@@ -159,9 +164,9 @@
 <br>
 
 ### 성능 식
-응답시간을 중심으로 한 성능의 정량적 식:
+응답시간을 중심으로 한 성능의 정량적 식: <br>
 > <img src="https://latex.codecogs.com/gif.latex?performance&space;=&space;\frac{1}{execution&space;time}" title="performance = \frac{1}{execution time}" />
-고전적인 CPU 성능식:
+고전적인 CPU 성능식: <br>
 > <img src="https://latex.codecogs.com/gif.latex?cpu&space;time&space;=&space;instructions&space;*&space;CPI&space;*&space;clockcycle&space;=&space;\frac{instructions&space;*&space;CPI}{clock&space;speed}" title="cpu time = instructions * CPI * clockcycle = \frac{instructions * CPI}{clock speed}" />
 <br>
 <br>
@@ -208,7 +213,7 @@
 
 ## 1.10 오류 및 함정
 - *함정*: 컴퓨터의 한 부분만 개선하고 그 개선된 양에 비례해서 전체 성능이 좋아지리라 기대하는 것은 흔한 착각이다.
-> `Amdahl's law`: 
+> `Amdahl's law` <br>
 > `개선 후 실행시간` = (`개선에 의해 영향을 받는 실행시간` / `개선의 크기`) + `영향을 받지 않는 실행시간`
 - *오류*: 이용률이 낮은 컴퓨터는 전력 소모가 작다. → 서버는 작업부하가 가변적이기 때문에 이용률이 낮을 때의 전력효율이 중요하다. 실제 예에서, 한 서버는 이용률이 대부분 10%~50%이고 이용률이 100%인 경우는 전체 시간의 1%도 되자 않는다고 한다. 하지만 작업부하가 겨우 10%일 때 그 서버는 최대 전력의 33%나 소비하고 있었다.
 - *오류*: 성능에 초점을 둔 설계와 에너지 효율에 초점을 둔 설계는 서로 무관하다. → 실행시간이 짧아지면 시스템의 전체 에너지가 절약될 수 있다.
