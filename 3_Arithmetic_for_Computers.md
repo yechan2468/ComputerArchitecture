@@ -20,8 +20,8 @@
 - 덧셈<br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;0000 0010<br>
-\+&nbsp;&nbsp;&nbsp;0000 1010<br>
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-<br>
++&nbsp;&nbsp;&nbsp;0000 1010<br>
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- <br>
 &nbsp;&nbsp;&nbsp;&nbsp;0000 1100<br>
 <br>
 만약 바로 한 단계 아랫 자리에서 올림수가 발생했다면, 그 올림수와 현재 자리수의 계산 값을 더한다.<br>
@@ -29,15 +29,15 @@
 - 뺄셈<br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;0000 0010<br>
-\-&nbsp;&nbsp;&nbsp;0000 1110<br>
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-<br>
+-&nbsp;&nbsp;&nbsp;0000 1110<br>
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- <br>
 &nbsp;&nbsp;&nbsp;&nbsp;0000 1100<br>
 <br>
 뺄셈은 뺄 값의 부호를 바꾼 뒤(0000 1010 -> 1111 0110) 두 수를 더한다.<br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;0000 0010<br>
-\+&nbsp;&nbsp;&nbsp;1111 0110<br>
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-<br>
++&nbsp;&nbsp;&nbsp;1111 0110<br>
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- <br>
 &nbsp;&nbsp;&nbsp;&nbsp;1111 1000<br>
 <br>
 2+10=12 (이진수로 0000 1100), 2-10=-8 (이진수로 1111 1000)이므로 결과가 기대한 것과 같다.<br>
@@ -72,7 +72,7 @@ MIPS에서는 두 가지 경우를 지원하기 위해 산술 명령어를 부�
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000<br>
 &nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;&nbsp;&nbsp;1001<br>
-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-<br>
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0000<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0000<br>
@@ -137,13 +137,13 @@ Product 레지스터에는 처음에는 상위 32비트/하위 32비트를 각�
 이 절에서도 먼저 초등학교에서 배운 방식으로 1001010을 1000으로 나눠보자.<br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- <br>
 1000 ) 1001010<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- 1000<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1010<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1000<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10<br>
 <br>
 
